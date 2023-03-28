@@ -64,6 +64,7 @@ const Wrapper = styled.div`
   @media (min-width: 768px) {
     .products {
       grid-template-columns: 200px 1fr;
+      min-height: 1200px;
     }
   }
 `;

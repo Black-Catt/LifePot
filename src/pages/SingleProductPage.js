@@ -11,7 +11,6 @@ import {
   PageHero,
 } from '../components';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSingleProduct } from '../store/productsSlice';
 
@@ -54,7 +53,6 @@ const SingleProductPage = () => {
     stars,
     reviews,
     id: sku,
-    company,
     images,
   } = product;
 
