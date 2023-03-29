@@ -64,6 +64,7 @@ I also made a fictitious payment method using "Stripe".
 Moreover, I released the ability to filter products by price, color and category. In addition, I added the ability to search by name. There is a possibility to sort by price and product name.
 ![search](https://user-images.githubusercontent.com/106864247/228478714-4938f4c2-dfed-4a0c-b1b5-4b224c36f991.gif)
 I created the data with airtbale and retrieved it with their api.
+![image](https://user-images.githubusercontent.com/106864247/228487188-5e4da29d-b6bb-406a-b477-5e8abe0e0ce8.png)
 
 
 
