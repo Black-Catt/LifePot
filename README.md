@@ -65,7 +65,8 @@ Moreover, I released the ability to filter products by price, color and category
 ![search](https://user-images.githubusercontent.com/106864247/228478714-4938f4c2-dfed-4a0c-b1b5-4b224c36f991.gif)
 I created the data with airtbale and retrieved it with their api.
 ![image](https://user-images.githubusercontent.com/106864247/228487188-5e4da29d-b6bb-406a-b477-5e8abe0e0ce8.png)
-
+I used formspree for email subscribe
+![email](https://user-images.githubusercontent.com/106864247/228508803-4496b5ef-b9e4-45d0-aeb3-d5ec85a3d192.gif)
 
 
 
