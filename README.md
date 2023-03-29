@@ -4,14 +4,7 @@
 
 
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -98,17 +91,24 @@ I created the data with airtbale and retrieved it with their api.
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
 1. Clone the repo
    ```sh
    git clone https://github.com/Black-Catt/LifePot.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
    ```
 3. Install NPM packages
    ```sh
    npm install
    ```
-   
+4. You should get the keys to 'airtable' and create your own data. Also, the keys to 'stripe' and 'auth0'. You need to replace my keys on your after that.
+You can get your own keys there:
+ <a href="https://www.airtable.com/guides/scale/using-airtable-api">Airtable</a>
+ <a href="https://stripe.com/docs/keys">Stripe</a>
+ <a href="https://auth0.com/docs/api/authentication">Auth0</a>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
