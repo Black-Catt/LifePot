@@ -13,6 +13,7 @@ import {
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSingleProduct } from '../store/productsSlice';
+import { RelatedProducts } from '../components';
 
 const SingleProductPage = () => {
   const dispatch = useDispatch();
@@ -72,13 +73,14 @@ const SingleProductPage = () => {
               {stock > 0 ? 'In stock' : 'out of stock'}
             </p>
             <p className="info">
-              <span>ID :</span>
+              <span>SKU :</span>
               {sku}
             </p>
             <hr />
             {stock > 0 && <AddToCart product={product} />}
           </section>
         </div>
+        <RelatedProducts />
       </Inner>
     </Wrapper>
   );
@@ -110,7 +112,7 @@ const Wrapper = styled.main`
   .product-center {
     background-color: var(--clr-white);
     padding: 20px;
-    border-radius: var(--radius);
+    border-radius: 0.9rem 0.9rem 0 0;
   }
 
   @media (min-width: 992px) {

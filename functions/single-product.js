@@ -29,6 +29,7 @@ exports.handler = async function (event) {
       };
     }
   }
+  
   return {
     statusCode: 400,
     body: 'Provide product id',

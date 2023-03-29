@@ -18,6 +18,7 @@ import Stars from './Stars';
 import CartContent from './CartContent';
 import PageHero from './PageHero';
 import StripeCheckout from './StripeCheckout';
+import RelatedProducts from './RelatedProducts';
 export {
   FeaturedProducts,
   Navbar,
@@ -29,6 +30,7 @@ export {
   Contact,
   Loading,
   Error,
+  RelatedProducts,
   Pagination,
   ProductImages,
   AddToCart,
