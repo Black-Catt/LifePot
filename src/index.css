@@ -1,21 +1,12 @@
-/*
-=============== 
-Variables
-===============
-*/
-
-/* #EE4C7C #9a1750 #5D001E #E3AFBC */
 :root {
   --bg-home: url('../src/assets/bg-home.png');
   --bg-contact: url('../src/assets/bg-contact.png');
   --bg-products: url('../src/assets/bg-products.png');
   --bg-about: url('../src/assets/bg-about.png');
-  /* dark shades of primary color*/
   --clr-primary-1: #14532d;
   --clr-primary-2: #166534;
   --clr-primary-3: #15803d;
   --clr-primary-4: rgba(99, 119, 81, 1);
-  /* primary/main color */
   --clr-primary-5: rgba(99, 119, 81, 1);
   /* lighter shades of primary color */
   --clr-primary-6: rgb(111, 135, 89);
@@ -23,18 +14,6 @@ Variables
   --clr-primary-8: rgb(181, 216, 148);
   --clr-primary-9: rgb(167, 202, 134);
   --clr-primary-10: rgba(99, 119, 81, 0.44);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(0, 0%, 100%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(0, 0%, 100%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(0, 0%, 100%);
-  --clr-grey-6: hsl(0, 0%, 100%);
-  --clr-grey-7: hsl(0, 0%, 100%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
@@ -49,11 +28,6 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
-/*
-=============== 
-Global Styles
-===============
-*/
 
 *,
 ::after,
@@ -79,7 +53,7 @@ a {
 }
 hr {
   border: none;
-  border-top: 1px solid var(--clr-grey-8);
+  border-top: 1px solid gray;
 }
 h1,
 h2,

@@ -52,7 +52,7 @@ const Wrapper = styled.section`
   p {
     line-height: 2;
     max-width: 45em;
-    color: var(--clr-grey-5);
+    color: var(--clr-white);
   }
   .contact-form {
     width: 90vw;
@@ -69,7 +69,7 @@ const Wrapper = styled.section`
   }
   .form-input {
     border-right: none;
-    color: var(--clr-grey-3);
+    color: var(--clr-black);
     border-top-left-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
   }

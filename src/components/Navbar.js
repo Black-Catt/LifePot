@@ -117,7 +117,7 @@ const NavContainer = styled.nav`
         letter-spacing: var(--spacing);
         padding: 0.5rem;
         &:hover {
-          color: var(--clr-grey-3);
+          color: var(--clr-white);
         }
       }
       a::before {

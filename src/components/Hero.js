@@ -41,7 +41,7 @@ const Inner = styled.div`
     line-height: 2;
     max-width: 45em;
     margin-bottom: 2rem;
-    color: var(--clr-grey-5);
+    color: var(--clr-white);
     font-size: 1rem;
     text-align: center;
     opacity: 0.7;
