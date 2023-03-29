@@ -66,7 +66,11 @@ I developed a store selling ceramic products with the ability to authenticate vi
 
 
 I also made a fictitious payment method using "Stripe".
-![paymaent2](https://user-images.githubusercontent.com/106864247/228383794-1a03069d-5a20-4587-b8fd-4562facd41f4.gif)
+![paymaent](https://user-images.githubusercontent.com/106864247/228383794-1a03069d-5a20-4587-b8fd-4562facd41f4.gif)
+
+Moreover, I released the ability to filter products by price, color and category. In addition, I added the ability to search by name. There is a possibility to sort by price and product name.
+![search](https://user-images.githubusercontent.com/106864247/228478714-4938f4c2-dfed-4a0c-b1b5-4b224c36f991.gif)
+I created the data with airtbale and retrieved it with their api.
 
 
 
