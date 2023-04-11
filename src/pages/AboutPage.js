@@ -35,7 +35,7 @@ const Wrapper = styled.main`
 `;
 
 const Inner = styled.section`
-  min-height: 70.8vh;
+  min-height: 71.8vh;
   p {
     line-height: 2;
     max-width: 45em;
