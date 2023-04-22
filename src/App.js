@@ -3,8 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar, Sidebar, Footer } from './components';
 import { countCartTotals } from '../src/store/cartSlice';
-import { fetchProducts } from './store/productsSlice';
-import { products_url as url } from '../src/utils/constants';
 
 import {
   Home,
@@ -21,10 +19,6 @@ import {
 function App() {
   const { cart } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchProducts(url));
-    // eslint-disable-next-line
-  }, []);
 
   useEffect(() => {
     dispatch(countCartTotals());

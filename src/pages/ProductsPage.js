@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
+import { useGetProductsQuery } from '../api/apiSlice';
 import {
   Filters,
   ProductList,
@@ -8,6 +9,7 @@ import {
   PageHero,
   Loading,
   Pagination,
+  Error,
 } from '../components';
 import {
   loadProducts,
@@ -17,13 +19,17 @@ import {
 
 const ProductsPage = () => {
   const dispatch = useDispatch();
-  const { products, loading } = useSelector((state) => state.products);
+  const {
+    data: products,
+    isLoading: loading,
+    isError: error,
+  } = useGetProductsQuery();
+
   const { sort, filters } = useSelector((state) => state.filter);
 
   useEffect(() => {
-    dispatch(loadProducts(products));
-    if (loading) {
-      return <Loading />;
+    if (!loading) {
+      dispatch(loadProducts(products));
     }
     // eslint-disable-next-line
   }, [products]);
@@ -31,11 +37,15 @@ const ProductsPage = () => {
   useEffect(() => {
     dispatch(filterProducts());
     dispatch(sortProducts());
-    if (loading) {
-      return <Loading />;
-    }
     // eslint-disable-next-line
   }, [products, sort, filters]);
+
+  if (loading) {
+    return <Loading />;
+  }
+  if (error) {
+    return <Error />;
+  }
 
   return (
     <Main>

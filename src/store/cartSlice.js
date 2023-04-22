@@ -1,6 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 
 const getLocalStorage = () => {
   let cart = localStorage.getItem('cart');

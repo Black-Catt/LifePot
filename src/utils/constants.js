@@ -1,4 +1,3 @@
-import React from 'react';
 import { MdAutoAwesome, MdAutoFixHigh, MdOutlineHelp } from 'react-icons/md';
 export const links = [
   {
@@ -38,7 +37,3 @@ export const services = [
     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
   },
 ];
-
-export const products_url = '/.netlify/functions/products';
-
-export const single_product_url = `/.netlify/functions/single-product?id=`;

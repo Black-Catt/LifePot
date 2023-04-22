@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { single_product_url as url } from '../utils/constants';
 import { formatPrice } from '../utils/helpers';
 import {
   Loading,
@@ -11,25 +10,18 @@ import {
   PageHero,
 } from '../components';
 import styled from 'styled-components';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchSingleProduct } from '../store/productsSlice';
 import { RelatedProducts } from '../components';
+import { useGetSingleProductQuery } from '../api/apiSlice';
 
 const SingleProductPage = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   const { id } = useParams();
 
-  useEffect(() => {
-    dispatch(fetchSingleProduct(`${url}${id}`));
-    //eslint-disable-next-line
-  }, [id]);
-
   const {
-    single_product_loading: loading,
-    single_product_error: error,
-    single_product: product,
-  } = useSelector((state) => state.products);
+    data: product,
+    isLoading: loading,
+    isError: error,
+  } = useGetSingleProductQuery(id);
 
   useEffect(() => {
     if (error) {
