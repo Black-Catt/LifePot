@@ -3,6 +3,7 @@ import { getUniqueValues, formatPrice } from '../utils/helpers';
 import { FaCheck } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateFilters, clearFilters } from '../store/filterSlice';
+import { useMemo, useState } from 'react';
 const Filters = () => {
   const dispatch = useDispatch();
 
@@ -14,6 +15,21 @@ const Filters = () => {
   const categories = getUniqueValues(all_products, 'category');
 
   const colors = getUniqueValues(all_products, 'colors');
+
+  const [searchText, setSearchText] = useState(text);
+
+  const debounce = () => {
+    let timeoutID;
+    return (e) => {
+      setSearchText(e.target.value);
+      clearTimeout(timeoutID);
+      timeoutID = setTimeout(() => {
+        dispatch(updateFilters({ name: e.target.name, value: e.target.value }));
+      }, 1000);
+    };
+  };
+
+  const optimizedDebounce = useMemo(() => debounce(), []);
 
   const getFilters = (e) => {
     let name = e.target.name;
@@ -42,9 +58,9 @@ const Filters = () => {
             <input
               type="text"
               name="text"
-              value={text}
+              value={searchText}
               placeholder="search"
-              onChange={getFilters}
+              onChange={optimizedDebounce}
               className="search-input"
             />
           </div>
