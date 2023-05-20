@@ -4,12 +4,15 @@ import { FaCheck } from 'react-icons/fa';
 import { updateFilters, clearFilters } from '../store/filterSlice';
 import { useMemo, useState, FC } from 'react';
 import { useAppSelector, useAppDispatch } from '../store/index';
+import { usePageParam } from '../hooks/usePageParams';
 
 type FiltersEventHandler =
   | React.ChangeEvent<HTMLInputElement>
   | React.MouseEvent<HTMLButtonElement>;
 
 const Filters: FC = () => {
+  const { setPage } = usePageParam();
+
   const dispatch = useAppDispatch();
 
   const {
@@ -63,7 +66,9 @@ const Filters: FC = () => {
         }
       }
     }
+
     dispatch(updateFilters({ name, value }));
+    setPage(0);
   };
 
   return (
