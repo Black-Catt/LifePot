@@ -3,8 +3,8 @@ import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs';
 import { FC } from 'react';
 
 interface StarsProps {
-  stars: number;
-  reviews: string;
+  stars: string | number;
+  reviews: number;
 }
 
 const Stars: FC<StarsProps> = ({ stars, reviews }) => {
@@ -12,9 +12,9 @@ const Stars: FC<StarsProps> = ({ stars, reviews }) => {
     const number = index + 0.5;
     return (
       <span key={index}>
-        {stars >= index + 1 ? (
+        {Number(stars) >= index + 1 ? (
           <BsStarFill />
-        ) : stars >= number ? (
+        ) : Number(stars) >= number ? (
           <BsStarHalf />
         ) : (
           <BsStar />

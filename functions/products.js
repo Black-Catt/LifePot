@@ -46,7 +46,7 @@ exports.handler = async function (event, contex) {
       body: JSON.stringify(products),
     };
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return {
       statusCode: 500,
       body: 'An error occured',

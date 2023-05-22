@@ -21,7 +21,7 @@ const SingleProductPage: FC = () => {
     data: product,
     isLoading: loading,
     isError: error,
-  } = useGetSingleProductQuery(id);
+  } = useGetSingleProductQuery({ id: id! });
 
   useEffect(() => {
     if (error) {
@@ -35,9 +35,10 @@ const SingleProductPage: FC = () => {
   if (loading) {
     return <Loading />;
   }
-  if (error) {
+  if (error || !product) {
     return <Error />;
   }
+
   const {
     name,
     price,

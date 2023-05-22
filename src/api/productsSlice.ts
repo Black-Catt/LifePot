@@ -1,6 +1,10 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { GlobalProductInDTO } from './dto/product';
 
+interface SingleProductParams {
+  id: string;
+}
+
 export const productsSlice = createApi({
   reducerPath: 'products',
   baseQuery: fetchBaseQuery({ baseUrl: '/.netlify/functions' }),
@@ -8,8 +12,8 @@ export const productsSlice = createApi({
     getProducts: builder.query<GlobalProductInDTO[], void>({
       query: () => '/products',
     }),
-    getSingleProduct: builder.query({
-      query: (id) => `/single-product?id=${id}`,
+    getSingleProduct: builder.query<GlobalProductInDTO, SingleProductParams>({
+      query: ({ id }) => `/single-product?id=${String(id)}`,
     }),
   }),
 });

@@ -9,7 +9,6 @@ import { GlobalProductInDTO } from '../api/dto/product';
 import { useAppDispatch } from '../store/index';
 
 interface AddToCartProps {
-  
   product: GlobalProductInDTO;
 }
 

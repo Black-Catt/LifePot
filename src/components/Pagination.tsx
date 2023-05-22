@@ -15,7 +15,7 @@ const Pagination: FC<PaginationProps> = () => {
   const { filtered_products: products } = useAppSelector(
     (state) => state.filter
   );
-  console.log('🚀 ~ file: Pagination.tsx:16 ~ filtered_products:', products);
+
   const [currentItems, setCurrentItems] = useState<GlobalProductInDTO[]>([]);
   const [pageCount, setPageCount] = useState<number>(0);
   const [itemOffset, setItemOffset] = useState<number>(0);

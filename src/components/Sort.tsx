@@ -37,7 +37,6 @@ const Sort = () => {
           value={sort}
           onChange={(e) => {
             const value = e.target.value;
-            console.log(value);
             dispatch(updateSort(value));
           }}
           className="sort-input"
